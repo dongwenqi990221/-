@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>膳食疗养大全 - 食物是最好的医药</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f0f8f0 0%, #e6f3e6 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* 导航菜单 */
+        nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #2e8b57;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #2e8b57;
+            color: white;
+        }
+        
+        /* 内容区块 */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h2 {
+            color: #2e8b57;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* 表格样式 */
+        .disease-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .disease-table th {
+            background: #2e8b57;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .disease-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .disease-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .disease-table tr:hover {
+            background: #e8f5e8;
+        }
+        
+        /* 特色区块 */
+        .feature-box {
+            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+            border-left: 4px solid #28a745;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 网站头部 -->
+        <header>
+            <h1>🌿 膳食疗养大全</h1>
+            <p>探索食物与健康的科学关系，打造健康生活方式</p>
+        </header>
+        
+        <!-- 导航菜单 -->
+        <nav>
+            <ul>
+                <li><a href="#basic">基础知识</a></li>
+                <li><a href="#diseases">病症调理</a></li>
+                <li><a href="#recipes">食疗配方</a></li>
+                <li><a href="#tips">实用技巧</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content-grid">
+            <!-- 基础知识区块 -->
+            <section class="card" id="basic">
+                <h2>📚 膳食疗养基础</h2>
+                <p>膳食疗养是通过科学合理的饮食安排，利用食物的营养价值和药用价值来预防和治疗疾病的自然疗法。</p>
+                
+                <div class="feature-box">
+                    <h3>🌟 核心原则</h3>
+                    <ul>
+                        <li><strong>个体化方案</strong> - 根据体质和病情定制饮食</li>
+                        <li><strong>预防为主</strong> - 通过饮食预防疾病发生</li>
+                        <li><strong>整体调理</strong> - 兼顾身心健康的综合方法</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- 病症调理区块 -->
+            <section class="card" id="diseases">
+                <h2>🏥 常见病症饮食指南</h2>
+                
+                <table class="disease-table">
+                    <thead>
+                        <tr>
+                            <th>病症</th>
+                            <th>推荐食物</th>
+                            <th>避免食物</th>
+                            <th>食疗建议</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>高血压</strong></td>
+                            <td>香蕉、芹菜、菠菜</td>
+                            <td>高盐食品、腌制品</td>
+                            <td>每日钠摄入＜6克</td>
+                        </tr>
+                        <tr>
+                            <td><strong>糖尿病</strong></td>
+                            <td>全谷物、豆类</td>
+                            <td>精制糖、甜饮</td>
+                            <td>低GI食物为主</td>
+                        </tr>
+                        <tr>
+                            <td><strong>高血脂</strong></td>
+                            <td>燕麦、深海鱼</td>
+                            <td>动物内脏、黄油</td>
+                            <td>增加膳食纤维</td>
+                        </tr>
+                        <tr>
+                            <td><strong>胃炎</strong></td>
+                            <td>小米粥、山药</td>
+                            <td>辛辣、油炸食品</td>
+                            <td>少食多餐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- 食疗配方区块 -->
+            <section class="card" id="recipes">
+                <h2>🍲 经典食疗配方</h2>
+                
+                <h3>🥣 降压养生粥</h3>
+                <p><strong>材料：</strong>燕麦50g、芹菜100g、香菇3朵</p>
+                <p><strong>做法：</strong>文火慢炖30分钟，每日早餐食用</p>
+                
+                <h3>🍵 控糖茶饮</h3>
+                <p><strong>材料：</strong>苦瓜片、桑叶、枸杞</p>
+                <p><strong>用法：</strong>沸水冲泡，代茶饮用</p>
+                
+                <div class="feature-box">
+                    <p>💡 提示：食疗需长期坚持，配合适当运动效果更佳</p>
+                </div>
+            </section>
+            
+            <!-- 实用技巧区块 -->
+            <section class="card" id="tips">
+                <h2>💡 健康饮食实用技巧</h2>
+                
+                <h3>🛒 采购指南</h3>
+                <ul>
+                    <li>选择当季新鲜蔬果</li>
+                    <li>阅读食品营养标签</li>
+                    <li>优先选择全谷物</li>
+                </ul>
+                
+                <h3>👩‍🍳 烹饪建议</h3>
+                <ul>
+                    <li>蒸、煮代替油炸</li>
+                    <li>少盐少油烹饪</li>
+                    <li>保留食物原味</li>
+                </ul>
+                
+                <h3>⏰ 进食习惯</h3>
+                <ul>
+                    <li>定时定量进食</li>
+                    <li>细嚼慢咽</li>
+                    <li>不过度进食</li>
+                </ul>
+            </section>
+        </div>
+        
+        <!-- 页脚 -->
+        <footer style="text-align: center; margin-top: 3rem; padding: 2rem; color: #666;">
+            <p>© 2024 膳食疗养大全 - 健康生活从科学饮食开始</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">免责声明：本内容仅供参考，具体健康问题请咨询专业医生</p>
+        </footer>
+    </div>
+</body>
+</html>
