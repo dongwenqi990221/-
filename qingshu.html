@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 给特别的人 | 我的心意</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        /* 心跳动画 */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .heart {
+            font-size: 4rem;
+            color: #ff4d6d;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            margin-bottom: 1rem;
+        }
+        
+        /* 主标题 */
+        .title {
+            font-size: 3rem;
+            color: #c9184a;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* 副标题 */
+        .subtitle {
+            font-size: 1.5rem;
+            color: #ff4d6d;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+        
+        /* 内容区域 */
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideUp 1s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+        
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        /* 时间线 */
+        .timeline {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .moment {
+            background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 0.5rem;
+            flex: 1;
+            min-width: 120px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        
+        .moment:nth-child(1) { animation-delay: 1.5s; }
+        .moment:nth-child(2) { animation-delay: 1.8s; }
+        .moment:nth-child(3) { animation-delay: 2.1s; }
+        
+        /* 按钮样式 */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .yes-btn {
+            background: linear-gradient(45deg, #ff4d6d, #c9184a);
+            color: white;
+        }
+        
+        .no-btn {
+            background: #f8f9fa;
+            color: #666;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .title { font-size: 2rem; }
+            .subtitle { font-size: 1.2rem; }
+            .timeline { flex-direction: column; }
+            .button-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 心跳动画 -->
+        <div class="heart">💖</div>
+        
+        <!-- 主标题 -->
+        <h1 class="title">给最特别的你</h1>
+        <p class="subtitle">遇见你，是我今生最美的意外</p>
+        
+        <!-- 主要内容 -->
+        <div class="content">
+            <div class="message">
+                <p>亲爱的，</p>
+                <p>从遇见你的那一刻起，我的世界就变得不一样了。你的笑容像阳光一样温暖，你的眼神如星辰般璀璨。</p>
+                <p>每一次和你聊天，每一次看到你的消息，都会让我的心跳加速。我想，这就是心动的感觉吧。</p>
+            </div>
+            
+            <!-- 美好时光 -->
+            <div class="timeline">
+                <div class="moment">
+                    <h3>初见</h3>
+                    <p>那一刻的心动</p>
+                </div>
+                <div class="moment">
+                    <h3>相处</h3>
+                    <p>点点滴滴的温暖</p>
+                </div>
+                <div class="moment">
+                    <h3>未来</h3>
+                    <p>期待与你同行</p>
+                </div>
+            </div>
+            
+            <div class="message">
+                <p>我不知道未来会怎样，但我知道，我想和你一起探索这个世界，分享生活的点点滴滴。</p>
+                <p>你愿意给我一个机会，让我成为守护你的那个人吗？</p>
+            </div>
+        </div>
+        
+        <!-- 互动按钮 -->
+        <div class="button-group">
+            <button class="btn yes-btn" onclick="showResponse('yes')">💖 我愿意</button>
+            <button class="btn no-btn" onclick="showResponse('no')">😊 考虑一下</button>
+        </div>
+        
+        <!-- 隐藏的表白信 -->
+        <div id="secret-letter" style="display: none; margin-top: 2rem; padding: 2rem; background: rgba(255,255,255,0.9); border-radius: 10px;">
+            <h3>💌 给最爱的你</h3>
+            <p>谢谢你选择给我机会！我会用行动证明你的选择是对的～</p>
+            <p>期待我们的故事继续书写... ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        // 交互功能
+        function showResponse(choice) {
+            const secretLetter = document.getElementById('secret-letter');
+            const buttons = document.querySelector('.button-group');
+            
+            if (choice === 'yes') {
+                secretLetter.style.display = 'block';
+                secretLetter.style.animation = 'slideUp 1s ease-in-out';
+                buttons.innerHTML = '<p style="color: #ff4d6d; font-size: 1.2rem;">🎉 太棒了！期待我们的故事～</p>';
+            } else {
+                // "考虑一下"的趣味反应
+                const noBtn = document.querySelector('.no-btn');
+                noBtn.textContent = '再考虑考虑嘛～';
+                noBtn.style.transform = 'scale(0.9)';
+                
+                // 3秒后恢复
+                setTimeout(() => {
+                    noBtn.textContent = '😊 考虑一下';
+                    noBtn.style.transform = 'scale(1)';
+                }, 2000);
+            }
+        }
+        
+        // 页面加载完成后的动画
+        window.addEventListener('load', function() {
+            document.body.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
